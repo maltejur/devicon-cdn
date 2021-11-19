@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/devicon-cdn
+devicon-cdn.so
+devicon-cdn.dylib
+devicon-cdn.dll
+devicon-cdn.a
+devicon-cdn.lib
+devicon-cdn-test-*
+*.exe
+*.o
+*.obj
+*.lst

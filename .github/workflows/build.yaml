@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup dlang
+        uses: mihails-strasuns/setup-dlang@v1
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run build
+        run: dub build -b release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: ./devicon-cdn
